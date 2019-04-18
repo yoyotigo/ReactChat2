@@ -135,7 +135,7 @@ module.exports = (io)=>{
                 if (err) throw err;
                 console.log('\n==========STORE EVENT IN DATABASE==========\nEvent Type: '+joinRoomEvent.type+'\nCreated by: ' + joinRoomEvent.name + '\nFor Socket: '+joinRoomEvent.socket+'\nIn the: '+joinRoomEvent.room+'\nSaved to database at: '+ joinRoomEvent.connect)
             })
-            message3=({author:'CHAT BOT NINJA', message: 'You have connected to ' + newroom})
+            message3=({author:'CHAT BOT NINJA', message: 'You have connected to ' + newroom + ' and left ' + socket.room})
             socket.emit('UPDATE_CHAT', message3);
         // sent message to old room
             message4=({author:'CHAT BOT NINJA', message: socket.nickname+' has left this room'})

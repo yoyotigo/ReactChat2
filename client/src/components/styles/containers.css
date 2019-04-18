@@ -102,8 +102,12 @@
     height: auto;
     width: 875%;
     border-radius: 5px;
-    margin:  15% 0% 35% 55%;
+    margin: 15% 0% 35% 55%;
     box-shadow: 1px 1px 12px rgb(0, 0, 0);
+    display: inline-block;
+    border: solid 1px black;
+    min-width: 50px;
+    max-width: 875%;
   }
   
   .name {
@@ -122,7 +126,6 @@
   
   .message {
     font-size: 75%;
-    margin: 0% 0% 0% 5%;
   }
   
   .chatbox__user-list {
@@ -186,7 +189,7 @@
   .chatbox p {
     float: left;
     text-align: left;
-    width: 71%;
+    width: 100%;
   }
   
   .chatbox form {
@@ -203,7 +206,7 @@
     padding: 1.2em;
     outline: none;
     font-weight: 300;
-    margin-left: 25%;
+    margin-left: 26%;
     margin-right: 27%;
     margin-bottom: 1%;
     box-shadow: 1px 1px 12px rgb(0, 0, 0);

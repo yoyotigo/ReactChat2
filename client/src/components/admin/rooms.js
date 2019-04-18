@@ -276,7 +276,7 @@ class Room extends React.Component{
       axios.post('http://localhost:5000/api/room/update/'+eid, {
         status:stat
       })
-      this.setState({status:stat, selected: []})
+      this.setState({selected: []})
     }else{
       alert('Cannot Update Main Chat Room')
     }
@@ -320,8 +320,14 @@ class Room extends React.Component{
     const { classes } = this.props;
     const { data, order, orderBy, id, selected, rowsPerPage, page, status } = this.state;
     const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
+   /* let rows= []
+    data.map(item=>{
+      this.date=item['created'].substring(0,10)
+      this.time=item['edited'].substring(11,16)
+      return rows.push(createData(item['room'],this.date, this.time, item['status']))
+    })*/
     this.selectStatus=(e)=>{
-      e.preventDefault()
+      e.prevetnDefault()
       this.setState({status:e.target.value})
     }
     return(
